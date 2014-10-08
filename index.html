@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile: Theme Download</title>
+	<link rel="stylesheet" href="themes/mobiletheme.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.3.min.css" />
+	<style>
+		div.ex{
+			width: 93%;
+			padding: 10px;
+			border: 5px solid gray;
+		}
+		#des{
+			width: 93%;
+			padding: 10px;
+			border: 5px solid gray;
+		}
+		#forImage{
+			width: 93%;
+			padding: 10px;
+			border: 5px solid gray;
+			margin: auto;
+			height:100px;
+		}
+	</style>
+</head>
+<body>
+	<div data-role="page" data-theme="a">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" >
+				<img src="css/images/header1.png" style="margin-left: auto; margin-right: auto; display: block;" width="100%"/>
+		</div>
+		<div data-role="content" data-theme="a" align="center">
+		<img src="css/info1.png" height="80%" width="80%" />
+			<form id="hideme"  action="#">
+				<div id="des"><h4 align="center"><i>A mobile application that tracks crime using mobile phones by posting the crimes that you've seen and also sending text messages on a police officers.<br>NOTE: This application is BETA and for testing only.</i></h4></div>
+				<div class="ex" style="margin-top:30px;">
+					<div class="ui-btn ui-icon-user ui-btn-icon-left">
+						<input type="text" class="form-control" name="username" id="username"  placeholder="Username" required />
+					</div>
+					<div class="ui-btn ui-icon-lock ui-btn-icon-left">
+						<input type="password" class="form-control" name="pass" id="lpass" placeholder="Password" required />
+					</div>
+					<input type="submit" name="submit" value="Log In" />
+				</div>
+			</form>
+			<div id="result"></div>
+			<h1 id="res"></h1>
+			<div class="ex" style="display:none;" id="toggle">
+				<div class="ui-btn ui-icon-info ui-btn-icon-left">
+					<form id="signupform" action="#" >
+						<b>Full Name*:</b>
+						<input type="text" class="form-control" name="fullname" id="fullname" maxlength="150">
+						<small id="errorfullname" style="color:#ff0000;display:block"></small>
+						<b>E-Mail*:</b>
+						<input type="email"  class="form-control" name="email" id="email" maxlength="50">
+						<small id="erroremail" style="color:#ff0000;display:block"></small>
+						<b>Username*:</b>
+						<small style="color:#2373a5"><br>8-15 Characters, Alphanumeric Characters</small>
+						<input type="text" class="form-control" name="username" id="username" maxlength="15">
+						<small id="errorusername" style="color:#ff0000;display:block"></small>
+						<b>Password*:</b>
+						<small style="color:#2373a5"><br>8-15 Characters, Alphanumeric Characters</small>
+						<input type="password" class="form-control" name="pass" id="pass" maxlength="15">
+						<small id="errorpass" style="color:#ff0000;display:block"></small>
+						<b>Confirm Password*:</b>
+						<input type="password" class="form-control" name="cpass" id="cpass" maxlength="15">
+						<small id="errorcpass" style="color:#ff0000;display:block"></small>
+					</form>
+				</div>
+				<input type="submit" value="Submit" id="btnsubmit" form="signupform">
+			</div>
+			<button id="hideReg"><small id="change">Register Here</small></button>
+			<button id="hideReg2" style="display:none;"><small id="change">Cancel</small></button>
+			<h3 style="color:gray;" align="center"><i>All Rights Reserved &copy; || 2014</i></h3>
+			<h3 style="color:gray;"  align="center"><i>Please give us feed back to improve and also to make this application successful in the future.</i></h3>
+		</div>
+	</div>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.3.min.js"></script>
+	<script src="js/jquery_validate.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
