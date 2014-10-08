@@ -48,6 +48,8 @@ html, body, #map-canvas {
 							<input type="hidden" style="display:none;" id="lat" name="lat" />
 							<input type="hidden" style="display:none;" id="lng" name="lng" />
 							<input type="hidden" style="display:none;" id="datetime" name="datetime" />
+							<textarea placeholder="Description" name="description" id="description" required></textarea>
+							<input type="text" name="street" placeholder="Street" required/>
 							<div data-role="fieldcontain" >
 							<label for="select-choice-1" class="select">Report Via SMS: </label>
 								<select name="number" id="select-choice-1" >
@@ -63,8 +65,7 @@ html, body, #map-canvas {
 										<option value="Carnapping">Carnapping</option>
 								</select>
 							</div>
-							<input type="text" name="street" placeholder="Street" required/>
-							<textarea placeholder="Description" name="description" id="description" required></textarea>
+							
 							<input type="hidden" placeholder="Remarks" style="display:none;" name="remarks" value="none"/>
 							<input type="submit" value="SEND Report" id="save">
 					</form>
@@ -74,7 +75,7 @@ html, body, #map-canvas {
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" id="post" style="background-color:#102947;"><img src="css/mid.png" height="60px" width="60px"/></a></li>
-			<li><a id="gtpview" style="background-color:#102947;"><img src="css/globe.png" height="60px" width="60px"/></a></li>
+			<li><a href="viewmap.html" id="gtpview" style="background-color:#102947;"><img src="css/globe.png" height="60px" width="60px"/></a></li>
 			<li><a href="#" id="logout" style="background-color:#102947;"><img src="css/logouticon.png" height="60px" width="60px"/></a></li>
 		</ul>
 	</div><!-- /navbar -->
@@ -166,7 +167,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 <script>//go to other page
 $("#gtpview").click(function(){
-location.href="viewmap.html";
+
 });
 $("#logout").click(function(){
 			window.localStorage.removeItem("datauser");
@@ -189,6 +190,9 @@ $.getJSON("http://gordoncollege-library.com/crime/phpfiles/addCrime.php?callback
 <script>
 		$(function(){
 			$('#save').click(function(){
+			if($('#description').val()==""){
+			
+			}else{
 				$.ajax({
 					url: 'http://gordoncollege-library.com/crime/chikka/index.php',
 					data: {
@@ -198,9 +202,10 @@ $.getJSON("http://gordoncollege-library.com/crime/phpfiles/addCrime.php?callback
 					},
 					success: function(i){
 						alert("SMS successfully sent.");
-						location.reload();
+						
 					}
 				});
+				}
 			});
 		});
 	</script>
