@@ -149,6 +149,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 							<input type="text" style="display:none;" id="lat" name="lat" />
 							<input type="text" style="display:none;" id="lng" name="lng" />
 							<input type="text" style="display:none;" id="datetime" name="datetime" />
+							<textarea placeholder="Description" name="description" id="description"></textarea>
+							<input type="text" name="street" placeholder="Street"/>
 							<div data-role="fieldcontain" >
 							<label for="select-choice-1" class="select">Report Via SMS: </label>
 								<select name="number" id="select-choice-1" >
@@ -164,8 +166,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 										<option value="Carnapping">Carnapping</option>
 								</select>
 							</div>
-							<input type="text" name="street" placeholder="Street"/>
-							<textarea placeholder="Description" name="description" id="description"></textarea>
+							
 							<input type="text" placeholder="Remarks" style="display:none;" name="remarks" value="none"/>
 							<input type="submit" value="SEND Report" id="save">
 					</form>
