@@ -167,11 +167,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 <script>//go to other page
 $("#gtpview").click(function(){
+$.mobile.loading('show');
 			location.href="viewmap.html";
+			$.mobile.loading('hide');
 });
 $("#logout").click(function(){
+$.mobile.loading('show');
 			window.localStorage.removeItem("datauser");
 			location.href="index.html";
+			$.mobile.loading('hide');
 });
 //add crime
 var form= $("#formserialize");

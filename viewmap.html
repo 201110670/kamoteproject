@@ -58,11 +58,15 @@
 <script type="text/javascript">
 //go to other pag
 $("#gtpost").click(function(){
+$.mobile.loading('show');
 			location.href="post.html";
+			$.mobile.loading('hide');
 });
 		$("#logout").click(function(){
+		$.mobile.loading('show');
 			window.localStorage.removeItem("datauser");
 			location.href="index.html";
+			$.mobile.loading('hide');
 });
 	//google map custom icon for crimes
     var customIcons = {
