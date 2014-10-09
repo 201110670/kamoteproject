@@ -140,7 +140,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 							<input type="hidden" style="display:none;" id="lng" name="lng" />
 							<input type="hidden" style="display:none;" id="datetime" name="datetime" />
 							<textarea placeholder="Description" name="description" id="description"></textarea>
-							<input type="text" name="street" placeholder="Street"/>
+							<input type="text" name="street" placeholder="Street" required/>
 							<div data-role="fieldcontain" >
 							<label for="select-choice-1" class="select">Report Via SMS: </label>
 								<select name="number" id="select-choice-1" >
@@ -207,6 +207,7 @@ location.href="viewmap.html";
 <script>
 		$(function(){
 			$('#save').click(function(){
+			if($('#description').val()!=""){
 				$.ajax({
 					url: 'http://gordoncollege-library.com/crime/chikka/index.php',
 					data: {
@@ -219,6 +220,7 @@ location.href="viewmap.html";
 						
 					}
 				});
+				}
 			});
 		});
 	</script>
