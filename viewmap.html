@@ -45,9 +45,9 @@
 	<div data-role="footer" data-position="fixed" data-tap-toggle="false">		
 	<div data-role="navbar">
 		<ul>
-		<li><a href="post.html" id="gtpost" style="background-color:#102947;"><img src="css/mid.png" height="60px" width="60px"/></a></li>
-			<li><a href="#" style="background-color:#102947;"><img src="css/globe.png" height="60px" width="60px"/></a></li>
-			<li><a href="#" id="logout" style="background-color:#102947;"><img src="css/logouticon.png" height="60px" width="60px"/></a></li>
+		<li><a id="gtpost" style="background-color:#102947;"><img src="css/mid.png" height="60px" width="60px"/></a></li>
+			<li><a style="background-color:#102947;"><img src="css/globe.png" height="60px" width="60px"/></a></li>
+			<li><a id="logout" style="background-color:#102947;"><img src="css/logouticon.png" height="60px" width="60px"/></a></li>
 		</ul>
 	</div><!-- /navbar -->
 </div>
@@ -58,7 +58,7 @@
 <script type="text/javascript">
 //go to other pag
 $("#gtpost").click(function(){
-		
+			location.href="post.html";
 });
 		$("#logout").click(function(){
 			window.localStorage.removeItem("datauser");
